@@ -42,8 +42,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // TODO
         // Add values to each of the fields in the custom cell based on the info in the event struct
         var cell: EventCardCell = tableView.dequeueReusableCellWithIdentifier("cell") as EventCardCell
-        
-        
+        cell.eventCardDesc.text = eventMgr.events[indexPath.row].desc
+        cell.eventCardAvatar.image = UIImage(named: "avatar")
+        cell.eventCardTags.text=eventMgr.events[indexPath.row].tags
+        cell.eventCardDist.text=eventMgr.events[indexPath.row].location
+        cell.eventCardGroupSize.text=eventMgr.events[indexPath.row].groupSize
+        cell.eventCardName.text=eventMgr.events[indexPath.row].name
+        cell.eventCardTime.text=eventMgr.events[indexPath.row].timePosted
         
         return cell
         
