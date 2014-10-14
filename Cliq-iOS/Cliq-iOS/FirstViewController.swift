@@ -26,6 +26,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         println("Error while updating location ")
     }
     
+    func findMyTime(){
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
+        let hour = components.hour
+        let minutes = components.minute
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Counts how many events there are to set the number of rows in the table
         return eventMgr.events.count
