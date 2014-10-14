@@ -27,7 +27,7 @@ struct event{
     var groupSize = 6
     var location = ["lat": 40.110971, "long": -88.225928]
     var name = "Firstname"
-    var avatar = "n/a"
+    var avatar = UIImage(named: "avatar")
     
 }
 
@@ -39,7 +39,7 @@ class EventManager: NSObject {
     // Add a function to add a new event with the information in the parameters
     
     func addEvent(desc: String, tags: String, timePosted: NSDate,
-        groupSize: Int, lat: Double, long: Double, name: String, avatar: String) {
+        groupSize: Int, lat: Double, long: Double, name: String, avatar: UIImage) {
         
             var location = ["lat": lat, "long": long]
             var time = timePosted.description
