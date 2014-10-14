@@ -45,12 +45,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.eventCardDesc.text = eventMgr.events[indexPath.row].desc
         cell.eventCardAvatar.image = UIImage(named: "avatar")
         cell.eventCardTags.text=eventMgr.events[indexPath.row].tags
-        cell.eventCardDist.text=eventMgr.events[indexPath.row].location
-        cell.eventCardGroupSize.text=eventMgr.events[indexPath.row].groupSize
+        cell.eventCardDist.text=eventMgr.events[indexPath.row].tags
+        cell.eventCardGroupSize.text=String(eventMgr.events[indexPath.row].groupSize)
         cell.eventCardName.text=eventMgr.events[indexPath.row].name
         cell.eventCardTime.text=eventMgr.events[indexPath.row].timePosted
         
         return cell
+        
         
     }
     
