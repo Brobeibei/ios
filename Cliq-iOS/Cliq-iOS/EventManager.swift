@@ -10,10 +10,20 @@ import UIKit
 
 var eventMgr : EventManager = EventManager()
 
+extension NSDate {
+    func toS(let format:String) -> String? {
+        var formatter:NSDateFormatter = NSDateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        formatter.timeZone = NSTimeZone()
+        formatter.dateFormat = format
+        return formatter.stringFromDate(self)
+    }
+}
+
 struct event{
     var desc = "No description"
     var tags = "No tags"
-    var timePosted = NSDate.date()
+    var timePosted = NSDate.description()
     var groupSize = 6
     var location = ["lat": 40.110971, "long": -88.225928]
     var name = "Firstname"
@@ -32,8 +42,9 @@ class EventManager: NSObject {
         groupSize: Int, lat: Double, long: Double, name: String, avatar: String) {
         
             var location = ["lat": lat, "long": long]
+            var time = timePosted.description
             
-            events.append(event(desc: desc, tags: tags, timePosted: timePosted,
+            events.append(event(desc: desc, tags: tags, timePosted: time,
                 groupSize: groupSize, location: location, name: name, avatar: avatar))
     
     }
