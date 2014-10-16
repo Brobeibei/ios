@@ -10,8 +10,19 @@ import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
     
-    @IBOutlet var txtTitle : UITextField!
-    @IBOutlet var txtDesc : UITextField!
+//    @IBOutlet var txtTitle : UITextField!
+//    @IBOutlet var txtDesc : UITextField!
+    
+    @IBOutlet weak var txtDesc: UITextField!
+    @IBOutlet weak var txtTags: UITextField!
+    @IBOutlet weak var txtGroup: UITextField!
+    
+    let lm = CLLocationManager()
+    
+    func lm(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        var locValue:CLLocationCoordinate2D = manager.location.coordinate
+        println("locations = \(locValue.latitude) \(locValue.longitude)")
+    }
     
     
     var manager: OneShotLocationManager?
@@ -19,6 +30,16 @@ class SecondViewController: UIViewController, UITextFieldDelegate, CLLocationMan
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.lm.requestAlwaysAuthorization()
+        
+        if (CLLocationManager.locationServicesEnabled()){
+            lm.delegate = self
+            lm.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            lm.startUpdatingLocation()
+        }
+        
+        
         
         manager = OneShotLocationManager()
         manager!.fetchWithCompletion {location, error in
@@ -31,6 +52,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate, CLLocationMan
             }
             self.manager = nil
         }
+        
+        
 
         
     }
@@ -45,10 +68,17 @@ class SecondViewController: UIViewController, UITextFieldDelegate, CLLocationMan
         
         // TODO
         // Get all the information that we need to create a new event
+        var inputDesc = txtDesc.text
+        var inputTags = txtTags.text
+        var inputGroup = txtGroup.text.toInt()
+        var username = "Firstname"
+        var avatarImage = UIImage(named: "Avatar")
+        var inputTime = NSDate()
+        
+        eventMgr.addEvent(inputDesc, tags: inputTags, timePosted: inputTime, groupSize: inputGroup!, lat: 000000000.00, long: 000000000.00, name: username, avatar: avatarImage)
         
         
-        
-//        eventMgr.addEvent(txtTitle.text, desc: txtDesc.text)
+        //        eventMgr.addEvent(txtTitle.text, desc: txtDesc.text)
 //        txtTitle.text = ""
 //        txtDesc.text = ""
         self.tabBarController?.selectedIndex = 0

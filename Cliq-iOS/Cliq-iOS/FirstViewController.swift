@@ -50,13 +50,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // TODO
         // Add values to each of the fields in the custom cell based on the info in the event struct
         var cell: EventCardCell = tableView.dequeueReusableCellWithIdentifier("cell") as EventCardCell
+        
         cell.eventCardDesc.text = eventMgr.events[indexPath.row].desc
         cell.eventCardAvatar.image = UIImage(named: "avatar")
         cell.eventCardTags.text=eventMgr.events[indexPath.row].tags
-        cell.eventCardDist.text=eventMgr.events[indexPath.row].tags
+//        cell.eventCardDist.text=eventMgr.events[indexPath.row].tags
+        cell.eventCardDist.text = "0.1 mi"
         cell.eventCardGroupSize.text=String(eventMgr.events[indexPath.row].groupSize)
         cell.eventCardName.text=eventMgr.events[indexPath.row].name
-        cell.eventCardTime.text=eventMgr.events[indexPath.row].timePosted
+//        cell.eventCardTime.text=eventMgr.events[indexPath.row].timePosted
+        cell.eventCardTime.text = "3 min"
         
         return cell
         
@@ -75,6 +78,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Register custom cell
         var nib = UINib(nibName: "viewEventCardCell", bundle: nil)
         tblEvents.registerNib(nib, forCellReuseIdentifier: "cell")
+        
+        var inputTime = NSDate()
+        var location = ["lat": 000000, "long": 0000000]
+        
+        eventMgr.addEvent("I want to eat at McDonalds", tags: "food", timePosted: NSDate(), groupSize: 4, lat: 0000, long: 0000, name: "Arjun", avatar: UIImage(named: "Avatar"))
+        eventMgr.addEvent("Anyone want to play Smash (melee)?", tags: "games", timePosted: NSDate(), groupSize: 4, lat: 0000, long: 0000, name: "Aayush", avatar: UIImage(named: "Avatar"))
+        eventMgr.addEvent("Wanna have a mini-hackathon tonight?", tags: "code, hacking", timePosted: NSDate(), groupSize: 10, lat: 0000, long: 0000, name: "Peter", avatar: UIImage(named: "Avatar"))
+        eventMgr.addEvent("Let's go do some parkour!", tags: "parkour", timePosted: NSDate(), groupSize: 4, lat: 0000, long: 0000, name: "Tony", avatar: UIImage(named: "Avatar"))
         
     }
     

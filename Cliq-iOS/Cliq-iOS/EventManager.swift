@@ -31,6 +31,8 @@ struct event{
     
 }
 
+
+
 class EventManager: NSObject {
     
     var events = [event]()
@@ -48,11 +50,5 @@ class EventManager: NSObject {
                 groupSize: groupSize, location: location, name: name, avatar: avatar))
     
     }
-
-    
-//    func addEvent(title: String, desc: String) {
-//        events.append(event(title: title, desc: desc))
-//    }
-
 
 }
