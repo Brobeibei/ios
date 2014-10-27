@@ -1,11 +1,11 @@
 ios
 ===
 
-##Next meeting on Thursday, 9 Oct.
+##Next meeting on Thursday, 30 Oct.
 
-Make sure you're comfortable with Objective-C syntax.
+In our previous meeting, we discussed a number of UI elements.
 
-Play around with segues and UIMapView
+Please ensure that these UI elements have been implemented by the time we meet.
 
 ```
 CS 196 The Foundry at the University of Illinois at Urbana - Champaign
