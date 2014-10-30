@@ -21,6 +21,8 @@
 		0EFD3BCD19E9C16600F1015F /* Cliq_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BCC19E9C16600F1015F /* Cliq_iOSTests.swift */; };
 		0EFD3BDC19E9CB9000F1015F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFD3BDB19E9CB9000F1015F /* FacebookSDK.framework */; };
 		0EFD3BE019E9CE8500F1015F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BDF19E9CE8500F1015F /* LoginViewController.swift */; };
+		685898C41A02E0ED007D0E21 /* nameTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 685898C31A02E0ED007D0E21 /* nameTableCell.xib */; };
+		685898C61A02E1A8007D0E21 /* nameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685898C51A02E1A8007D0E21 /* nameCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		0EFD3BDA19E9C7BF00F1015F /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		0EFD3BDB19E9CB9000F1015F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		0EFD3BDF19E9CE8500F1015F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		685898C31A02E0ED007D0E21 /* nameTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nameTableCell.xib; sourceTree = "<group>"; };
+		685898C51A02E1A8007D0E21 /* nameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				0EFD3BC019E9C16600F1015F /* Images.xcassets */,
 				0EFD3BB519E9C16600F1015F /* Supporting Files */,
 				0ED99FCD19EC6BD800CCEB79 /* viewEventCardCell.xib */,
+				685898C31A02E0ED007D0E21 /* nameTableCell.xib */,
+				685898C51A02E1A8007D0E21 /* nameCell.swift */,
 			);
 			path = "Cliq-iOS";
 			sourceTree = "<group>";
@@ -230,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				685898C41A02E0ED007D0E21 /* nameTableCell.xib in Resources */,
 				0ED99FCC19EBBAA400CCEB79 /* GoogleMaps.bundle in Resources */,
 				0EFD3BBF19E9C16600F1015F /* Main.storyboard in Resources */,
 				0ED99FCE19EC6BD800CCEB79 /* viewEventCardCell.xib in Resources */,
@@ -253,6 +260,7 @@
 			files = (
 				0ED99FD019EC6E0500CCEB79 /* EventCardCell.swift in Sources */,
 				0ED99FC819EB258C00CCEB79 /* EventManager.swift in Sources */,
+				685898C61A02E1A8007D0E21 /* nameCell.swift in Sources */,
 				0EFD3BE019E9CE8500F1015F /* LoginViewController.swift in Sources */,
 				0EFD3BBC19E9C16600F1015F /* SecondViewController.swift in Sources */,
 				0ED99FD219ECC2EB00CCEB79 /* OneShotLocationManager.swift in Sources */,
