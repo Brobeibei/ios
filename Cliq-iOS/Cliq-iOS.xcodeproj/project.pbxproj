@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0559681A0741FD00E5C7DD /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0559671A0741FD00E5C7DD /* UserManager.swift */; };
+		0E44BBBE19FF65F4001312DF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E44BBBD19FF65F4001312DF /* Event.swift */; };
+		0E44BBC019FF6D56001312DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E44BBBF19FF6D56001312DF /* User.swift */; };
+		0EA80D2719EFA8E500D22EEF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA80D2619EFA8E500D22EEF /* CoreLocation.framework */; };
 		0ED99FC819EB258C00CCEB79 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED99FC719EB258C00CCEB79 /* EventManager.swift */; };
 		0ED99FCA19EBBA4600CCEB79 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED99FC919EBBA4600CCEB79 /* GoogleMaps.framework */; };
 		0ED99FCC19EBBAA400CCEB79 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0ED99FCB19EBBAA400CCEB79 /* GoogleMaps.bundle */; };
-		0ED99FCE19EC6BD800CCEB79 /* viewEventCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED99FCD19EC6BD800CCEB79 /* viewEventCardCell.xib */; };
 		0ED99FD019EC6E0500CCEB79 /* EventCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED99FCF19EC6E0500CCEB79 /* EventCardCell.swift */; };
-		0ED99FD219ECC2EB00CCEB79 /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED99FD119ECC2EB00CCEB79 /* OneShotLocationManager.swift */; };
 		0EFD3BB819E9C16600F1015F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BB719E9C16600F1015F /* AppDelegate.swift */; };
 		0EFD3BBA19E9C16600F1015F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BB919E9C16600F1015F /* FirstViewController.swift */; };
 		0EFD3BBC19E9C16600F1015F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BBB19E9C16600F1015F /* SecondViewController.swift */; };
@@ -34,12 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E0559671A0741FD00E5C7DD /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		0E44BBBD19FF65F4001312DF /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		0E44BBBF19FF6D56001312DF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0EA80D2619EFA8E500D22EEF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0ED99FC719EB258C00CCEB79 /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		0ED99FC919EBBA4600CCEB79 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		0ED99FCB19EBBAA400CCEB79 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		0ED99FCD19EC6BD800CCEB79 /* viewEventCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = viewEventCardCell.xib; sourceTree = "<group>"; };
 		0ED99FCF19EC6E0500CCEB79 /* EventCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCardCell.swift; sourceTree = "<group>"; };
-		0ED99FD119ECC2EB00CCEB79 /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
 		0EFD3BB219E9C16600F1015F /* Cliq-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cliq-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFD3BB619E9C16600F1015F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EFD3BB719E9C16600F1015F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA80D2719EFA8E500D22EEF /* CoreLocation.framework in Frameworks */,
 				0ED99FCA19EBBA4600CCEB79 /* GoogleMaps.framework in Frameworks */,
 				0EFD3BDC19E9CB9000F1015F /* FacebookSDK.framework in Frameworks */,
 			);
@@ -97,18 +102,19 @@
 		0EFD3BB419E9C16600F1015F /* Cliq-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				0ED99FD119ECC2EB00CCEB79 /* OneShotLocationManager.swift */,
 				0EFD3BDA19E9C7BF00F1015F /* Bridge-Header.h */,
 				0EFD3BB719E9C16600F1015F /* AppDelegate.swift */,
 				0EFD3BB919E9C16600F1015F /* FirstViewController.swift */,
 				0EFD3BBB19E9C16600F1015F /* SecondViewController.swift */,
 				0EFD3BDF19E9CE8500F1015F /* LoginViewController.swift */,
 				0ED99FC719EB258C00CCEB79 /* EventManager.swift */,
+				0E0559671A0741FD00E5C7DD /* UserManager.swift */,
+				0E44BBBD19FF65F4001312DF /* Event.swift */,
+				0E44BBBF19FF6D56001312DF /* User.swift */,
 				0EFD3BBD19E9C16600F1015F /* Main.storyboard */,
 				0ED99FCF19EC6E0500CCEB79 /* EventCardCell.swift */,
 				0EFD3BC019E9C16600F1015F /* Images.xcassets */,
 				0EFD3BB519E9C16600F1015F /* Supporting Files */,
-				0ED99FCD19EC6BD800CCEB79 /* viewEventCardCell.xib */,
 			);
 			path = "Cliq-iOS";
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 		0EFD3BD619E9C46700F1015F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0EA80D2619EFA8E500D22EEF /* CoreLocation.framework */,
 				0ED99FCB19EBBAA400CCEB79 /* GoogleMaps.bundle */,
 				0ED99FC919EBBA4600CCEB79 /* GoogleMaps.framework */,
 				0EFD3BDB19E9CB9000F1015F /* FacebookSDK.framework */,
@@ -232,7 +239,6 @@
 			files = (
 				0ED99FCC19EBBAA400CCEB79 /* GoogleMaps.bundle in Resources */,
 				0EFD3BBF19E9C16600F1015F /* Main.storyboard in Resources */,
-				0ED99FCE19EC6BD800CCEB79 /* viewEventCardCell.xib in Resources */,
 				0EFD3BC119E9C16600F1015F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,12 +257,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0559681A0741FD00E5C7DD /* UserManager.swift in Sources */,
 				0ED99FD019EC6E0500CCEB79 /* EventCardCell.swift in Sources */,
 				0ED99FC819EB258C00CCEB79 /* EventManager.swift in Sources */,
 				0EFD3BE019E9CE8500F1015F /* LoginViewController.swift in Sources */,
 				0EFD3BBC19E9C16600F1015F /* SecondViewController.swift in Sources */,
-				0ED99FD219ECC2EB00CCEB79 /* OneShotLocationManager.swift in Sources */,
+				0E44BBC019FF6D56001312DF /* User.swift in Sources */,
 				0EFD3BB819E9C16600F1015F /* AppDelegate.swift in Sources */,
+				0E44BBBE19FF65F4001312DF /* Event.swift in Sources */,
 				0EFD3BBA19E9C16600F1015F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,13 +10,12 @@ import UIKit
 
 class EventCardCell: UITableViewCell {
     
-    
     @IBOutlet weak var eventCardDesc: UILabel!
     @IBOutlet weak var eventCardTags: UILabel!
     @IBOutlet weak var eventCardTime: UILabel!
     @IBOutlet weak var eventCardGroupSize: UILabel!
-    @IBOutlet weak var eventCardDist: UILabel!
     @IBOutlet weak var eventCardName: UILabel!
+    @IBOutlet weak var eventCardDist: UILabel!
     @IBOutlet weak var eventCardAvatar: UIImageView!
     
     

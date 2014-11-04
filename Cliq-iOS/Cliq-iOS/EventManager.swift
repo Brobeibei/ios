@@ -6,49 +6,53 @@
 //  Copyright (c) 2014 Cliq. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 var eventMgr : EventManager = EventManager()
 
-extension NSDate {
-    func toS(let format:String) -> String? {
-        var formatter:NSDateFormatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        formatter.timeZone = NSTimeZone()
-        formatter.dateFormat = format
-        return formatter.stringFromDate(self)
-    }
-}
+//struct event{
+//    var desc = "No description"
+//    var tags = "No tags" //array of strings
+//    var timePosted = NSDate.description() //double for seconds from 1970
+//    var groupSize = 6
+//    var location = ["lat": 0.0, "long": 0.0]
+//    var name = "Firstname"
+//    var avatar = UIImage(named: "avatar")
+//    
+//    // attendees: array of users, the first attendee will be designated as the 'owner'
+//}
 
-struct event{
-    var desc = "No description"
-    var tags = "No tags"
-    var timePosted = NSDate.description()
-    var groupSize = 6
-    var location = ["lat": 40.110971, "long": -88.225928]
-    var name = "Firstname"
-    var avatar = UIImage(named: "avatar")
-    
-}
 
+// USER MODEL
+// Name : String
+// radius : Int
+// their location  : array of [0]lat,[1]long
+// rating : Double between 0-1
+// events : array of events they have attended, if event date is positive, it is an event they will attend in the future
 
 
 class EventManager: NSObject {
     
-    var events = [event]()
+    var eventStream = [Event]()
     
-    //TODO
-    // Add a function to add a new event with the information in the parameters
+    func addEventToMainStream(event : Event) {
+        eventStream.append(event);
+    }
     
-    func addEvent(desc: String, tags: String, timePosted: NSDate,
-        groupSize: Int, lat: Double, long: Double, name: String, avatar: UIImage) {
+    func requestToJoinEvent(user, User, event : Event) {
         
-            var location = ["lat": lat, "long": long]
-            var time = timePosted.description
-            
-            events.append(event(desc: desc, tags: tags, timePosted: time,
-                groupSize: groupSize, location: location, name: name, avatar: avatar))
+    }
     
+    func acceptRequest(user : User, event: Event) {
+        
+    }
+    
+    func declineRequest(user : User, event : Event) {
+        
+    }
+    
+    func editEvent(event : Event) {
+        
     }
 
 }
