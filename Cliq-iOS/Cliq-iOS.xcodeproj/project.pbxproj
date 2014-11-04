@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E0559681A0741FD00E5C7DD /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0559671A0741FD00E5C7DD /* UserManager.swift */; };
+		0E313A7A1A09971E0052DF54 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E313A791A09971E0052DF54 /* FacebookSDK.framework */; };
 		0E44BBBE19FF65F4001312DF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E44BBBD19FF65F4001312DF /* Event.swift */; };
 		0E44BBC019FF6D56001312DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E44BBBF19FF6D56001312DF /* User.swift */; };
 		0EA80D2719EFA8E500D22EEF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA80D2619EFA8E500D22EEF /* CoreLocation.framework */; };
@@ -21,7 +22,6 @@
 		0EFD3BBF19E9C16600F1015F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFD3BBD19E9C16600F1015F /* Main.storyboard */; };
 		0EFD3BC119E9C16600F1015F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFD3BC019E9C16600F1015F /* Images.xcassets */; };
 		0EFD3BCD19E9C16600F1015F /* Cliq_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BCC19E9C16600F1015F /* Cliq_iOSTests.swift */; };
-		0EFD3BDC19E9CB9000F1015F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFD3BDB19E9CB9000F1015F /* FacebookSDK.framework */; };
 		0EFD3BE019E9CE8500F1015F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BDF19E9CE8500F1015F /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		0E0559671A0741FD00E5C7DD /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		0E313A791A09971E0052DF54 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		0E44BBBD19FF65F4001312DF /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0E44BBBF19FF6D56001312DF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0EA80D2619EFA8E500D22EEF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -55,7 +56,6 @@
 		0EFD3BCB19E9C16600F1015F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EFD3BCC19E9C16600F1015F /* Cliq_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cliq_iOSTests.swift; sourceTree = "<group>"; };
 		0EFD3BDA19E9C7BF00F1015F /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
-		0EFD3BDB19E9CB9000F1015F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		0EFD3BDF19E9CE8500F1015F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +66,7 @@
 			files = (
 				0EA80D2719EFA8E500D22EEF /* CoreLocation.framework in Frameworks */,
 				0ED99FCA19EBBA4600CCEB79 /* GoogleMaps.framework in Frameworks */,
-				0EFD3BDC19E9CB9000F1015F /* FacebookSDK.framework in Frameworks */,
+				0E313A7A1A09971E0052DF54 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,10 +147,10 @@
 		0EFD3BD619E9C46700F1015F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E313A791A09971E0052DF54 /* FacebookSDK.framework */,
 				0EA80D2619EFA8E500D22EEF /* CoreLocation.framework */,
 				0ED99FCB19EBBAA400CCEB79 /* GoogleMaps.bundle */,
 				0ED99FC919EBBA4600CCEB79 /* GoogleMaps.framework */,
-				0EFD3BDB19E9CB9000F1015F /* FacebookSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

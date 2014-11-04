@@ -38,7 +38,7 @@ class User : NSObject {
         var eventList = [Event]()
     }
     
-    func edit(location: [dobule], bio: String, radius: double) {
+    func edit(location: [Double], bio: String, radius: Double) {
         self.location = location
         self.bio = bio
         self.radius = radius
