@@ -62,7 +62,6 @@ class Event : NSObject {
     }
     
     func editEvent(desc: String, tags : [String], groupSize : Int) {
-        
         self.desc = desc
         self.tags = tags
         self.groupSize = groupSize

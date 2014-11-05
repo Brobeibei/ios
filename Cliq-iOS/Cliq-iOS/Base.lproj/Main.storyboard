@@ -208,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="706" y="-817"/>
+            <point key="canvasLocation" x="706" y="-827"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="vck-Dj-5YA">
@@ -344,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="228"/>
+            <point key="canvasLocation" x="680" y="836"/>
         </scene>
         <!--Me-->
         <scene sceneID="M6Q-Vp-1qD">
@@ -436,11 +436,31 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="v48-1J-spn" kind="relationship" relationship="viewControllers" id="MLY-5K-I2o"/>
+                        <segue destination="Fur-tL-pEy" kind="relationship" relationship="viewControllers" id="K8S-dI-ju4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="4"/>
+        </scene>
+        <!--My Events-->
+        <scene sceneID="qZb-Kp-hCd">
+            <objects>
+                <viewController id="Fur-tL-pEy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YyP-db-hRn"/>
+                        <viewControllerLayoutGuide type="bottom" id="MBj-lH-xL7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k2d-mJ-8fP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Events" id="gMq-Xl-vaM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Aq-cN-VVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933" y="4"/>
         </scene>
     </scenes>
     <resources>

@@ -51,8 +51,8 @@ class EventManager: NSObject {
         
     }
     
-    func editEvent(event : Event) {
-        
+    func editEvent(event : Event, desc: String, tags : [String], groupSize : Int) {
+        event.editEvent(desc, tags: tags, groupSize: groupSize)
     }
 
 }
