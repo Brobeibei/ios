@@ -23,6 +23,8 @@
 		0EFD3BC119E9C16600F1015F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFD3BC019E9C16600F1015F /* Images.xcassets */; };
 		0EFD3BCD19E9C16600F1015F /* Cliq_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BCC19E9C16600F1015F /* Cliq_iOSTests.swift */; };
 		0EFD3BE019E9CE8500F1015F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BDF19E9CE8500F1015F /* LoginViewController.swift */; };
+		2A9ADD4E1A0B0B1300D1818E /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9ADD4B1A0B0B1300D1818E /* MGSwipeButton.m */; };
+		2A9ADD4F1A0B0B1300D1818E /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9ADD4D1A0B0B1300D1818E /* MGSwipeTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		0EFD3BCC19E9C16600F1015F /* Cliq_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cliq_iOSTests.swift; sourceTree = "<group>"; };
 		0EFD3BDA19E9C7BF00F1015F /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		0EFD3BDF19E9CE8500F1015F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2A9ADD4A1A0B0B1300D1818E /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
+		2A9ADD4B1A0B0B1300D1818E /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
+		2A9ADD4C1A0B0B1300D1818E /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
+		2A9ADD4D1A0B0B1300D1818E /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,10 @@
 		0EFD3BB419E9C16600F1015F /* Cliq-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2A9ADD4A1A0B0B1300D1818E /* MGSwipeButton.h */,
+				2A9ADD4B1A0B0B1300D1818E /* MGSwipeButton.m */,
+				2A9ADD4C1A0B0B1300D1818E /* MGSwipeTableCell.h */,
+				2A9ADD4D1A0B0B1300D1818E /* MGSwipeTableCell.m */,
 				0EFD3BDA19E9C7BF00F1015F /* Bridge-Header.h */,
 				0EFD3BB719E9C16600F1015F /* AppDelegate.swift */,
 				0EFD3BB919E9C16600F1015F /* FirstViewController.swift */,
@@ -259,6 +269,8 @@
 			files = (
 				0E0559681A0741FD00E5C7DD /* UserManager.swift in Sources */,
 				0ED99FD019EC6E0500CCEB79 /* EventCardCell.swift in Sources */,
+				2A9ADD4E1A0B0B1300D1818E /* MGSwipeButton.m in Sources */,
+				2A9ADD4F1A0B0B1300D1818E /* MGSwipeTableCell.m in Sources */,
 				0ED99FC819EB258C00CCEB79 /* EventManager.swift in Sources */,
 				0EFD3BE019E9CE8500F1015F /* LoginViewController.swift in Sources */,
 				0EFD3BBC19E9C16600F1015F /* SecondViewController.swift in Sources */,

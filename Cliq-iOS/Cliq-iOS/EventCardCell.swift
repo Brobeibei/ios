@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class EventCardCell: UITableViewCell {
+import MGSwipeTableCell.h
+class EventCardCell: MGSwipeTableCell {
     
     @IBOutlet weak var eventCardDesc: UILabel!
     @IBOutlet weak var eventCardTags: UILabel!
