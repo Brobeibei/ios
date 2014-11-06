@@ -45,11 +45,11 @@ class User : NSObject {
     }
     
     func requestToJoinEvent(event: Event) {
-    
+         self.requestedEvents.append(event)
     }
     
     func addJoinedEvent(event: Event) {
-    
+         self.joinedEvents.append(event)
     }
     
 

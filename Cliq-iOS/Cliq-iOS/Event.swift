@@ -51,13 +51,13 @@ class Event : NSObject {
     
     func acceptRequest(user : User) {
         // TODO remove the user from the requestList
-        
+        var removedUser=requestList.removeLast()
         self.userList.append(user)
     }
     
     func declineRequest(user : User) {
         // TODO remove the user from the requestList
-        
+        var removedUser=requestList.removeLast()
         self.declinedList.append(user)
     }
     

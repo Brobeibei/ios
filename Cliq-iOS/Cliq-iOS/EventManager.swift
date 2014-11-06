@@ -39,16 +39,16 @@ class EventManager: NSObject {
         eventStream.append(event);
     }
     
-    func requestToJoinEvent(user, User, event : Event) {
-        
+    func requestToJoinEvent(user: User, event : Event) {
+        event.addRequest(user)
     }
     
     func acceptRequest(user : User, event: Event) {
-        
+        event.acceptRequest(user)
     }
     
     func declineRequest(user : User, event : Event) {
-        
+        event.declineRequest(user)
     }
     
     func editEvent(event : Event, desc: String, tags : [String], groupSize : Int) {

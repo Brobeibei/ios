@@ -26,7 +26,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate, CLLocationMan
     @IBAction func btnAddEvent_Click(sender: UIButton) {
         
 //        var newEvent = Event(txtDesc.text, ["hey", "hi"], Double(10010010), Int(txtGroup.text), [0.0,0.0], currentUser)
-        var newEvent = Event(desc: txtDesc.text, tags: ["1","2"], timePosted: 99999, groupSize: 1, location: [0.0,0.0], currentUser: userMgr.currentUser!)
+        var newEvent = Event(desc: txtDesc.text, tags: ["1","2"], timePosted: NSDate().timeIntervalSince1970, groupSize: txtGroup.tag, location: [0.0,0.0], currentUser: userMgr.currentUser!)
         
         eventMgr.addEventToMainStream(newEvent)
         
