@@ -1,7 +1,7 @@
 ios
 ===
 
-##Next meeting on Thursday, 30 Oct.
+##Next meeting on Thursday, 6 November, 3102 Siebel.
 
 In our previous meeting, we discussed a number of UI elements.
 
