@@ -27,16 +27,16 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb853251421371977</string>
+				<string>fb302797439909938</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>853251421371977</string>
+	<string>302797439909938</string>
 	<key>FacebookDisplayName</key>
-	<string>Cliq-iOS</string>
+	<string>cliq</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>

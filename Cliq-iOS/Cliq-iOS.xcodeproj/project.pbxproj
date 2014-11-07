@@ -23,6 +23,9 @@
 		0EFD3BC119E9C16600F1015F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFD3BC019E9C16600F1015F /* Images.xcassets */; };
 		0EFD3BCD19E9C16600F1015F /* Cliq_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BCC19E9C16600F1015F /* Cliq_iOSTests.swift */; };
 		0EFD3BE019E9CE8500F1015F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD3BDF19E9CE8500F1015F /* LoginViewController.swift */; };
+		2A9ADD6E1A0CB64500D1818E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9ADD6D1A0CB64500D1818E /* MapViewController.swift */; };
+		2A9ADD701A0CB65E00D1818E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9ADD6F1A0CB65E00D1818E /* Foundation.framework */; };
+		2A9ADD721A0CB66A00D1818E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9ADD711A0CB66A00D1818E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		0EFD3BCC19E9C16600F1015F /* Cliq_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cliq_iOSTests.swift; sourceTree = "<group>"; };
 		0EFD3BDA19E9C7BF00F1015F /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		0EFD3BDF19E9CE8500F1015F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2A9ADD6D1A0CB64500D1818E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2A9ADD6F1A0CB65E00D1818E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2A9ADD711A0CB66A00D1818E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9ADD721A0CB66A00D1818E /* MapKit.framework in Frameworks */,
+				2A9ADD701A0CB65E00D1818E /* Foundation.framework in Frameworks */,
 				0EA80D2719EFA8E500D22EEF /* CoreLocation.framework in Frameworks */,
 				0ED99FCA19EBBA4600CCEB79 /* GoogleMaps.framework in Frameworks */,
 				0E313A7A1A09971E0052DF54 /* FacebookSDK.framework in Frameworks */,
@@ -102,6 +110,7 @@
 		0EFD3BB419E9C16600F1015F /* Cliq-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2A9ADD6D1A0CB64500D1818E /* MapViewController.swift */,
 				0EFD3BDA19E9C7BF00F1015F /* Bridge-Header.h */,
 				0EFD3BB719E9C16600F1015F /* AppDelegate.swift */,
 				0EFD3BB919E9C16600F1015F /* FirstViewController.swift */,
@@ -147,6 +156,8 @@
 		0EFD3BD619E9C46700F1015F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A9ADD711A0CB66A00D1818E /* MapKit.framework */,
+				2A9ADD6F1A0CB65E00D1818E /* Foundation.framework */,
 				0E313A791A09971E0052DF54 /* FacebookSDK.framework */,
 				0EA80D2619EFA8E500D22EEF /* CoreLocation.framework */,
 				0ED99FCB19EBBAA400CCEB79 /* GoogleMaps.bundle */,
@@ -260,6 +271,7 @@
 				0E0559681A0741FD00E5C7DD /* UserManager.swift in Sources */,
 				0ED99FD019EC6E0500CCEB79 /* EventCardCell.swift in Sources */,
 				0ED99FC819EB258C00CCEB79 /* EventManager.swift in Sources */,
+				2A9ADD6E1A0CB64500D1818E /* MapViewController.swift in Sources */,
 				0EFD3BE019E9CE8500F1015F /* LoginViewController.swift in Sources */,
 				0EFD3BBC19E9C16600F1015F /* SecondViewController.swift in Sources */,
 				0E44BBC019FF6D56001312DF /* User.swift in Sources */,
