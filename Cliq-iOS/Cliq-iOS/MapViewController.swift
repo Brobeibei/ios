@@ -13,6 +13,7 @@ import CoreLocation
 
 class MapViewController: UIViewController{
     
+    @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // 1
@@ -23,7 +24,7 @@ class MapViewController: UIViewController{
         // 2
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
-        let mapView = MKMapView()
+       
         mapView.setRegion(region, animated: true)
         
         //3
