@@ -28,7 +28,7 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     
     func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
         println("User Logged In")
-       self .performSegueWithIdentifier("loggedIn", sender: self)
+       self.performSegueWithIdentifier("loggedIn", sender: self)
         // show the next view
         println("This is where you perform a segue.")
     }
