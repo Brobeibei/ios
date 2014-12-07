@@ -45,7 +45,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate, CLLocationMan
             attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
         txtTags.attributedPlaceholder = NSAttributedString(string:"What Should I Search?",
             attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
-        //timeDate.backgroundColor = UIColor(red:0.953125,green:0.9375, blue: 0.87109375, alpha: 0.75)
+        timeDate.backgroundColor = UIColor(red:0.953125,green:0.9375, blue: 0.87109375, alpha: 0.75)
         txtGroup.attributedText = NSAttributedString(string: "\(counter)")
     }
 
