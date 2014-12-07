@@ -16,6 +16,12 @@ class SecondViewController: UIViewController, UITextFieldDelegate, CLLocationMan
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtDesc.attributedPlaceholder = NSAttributedString(string:"What's Going Down?",
+            attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
+        txtGroup.attributedPlaceholder = NSAttributedString(string:"How Crowded Is This?",
+            attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
+        txtTags.attributedPlaceholder = NSAttributedString(string:"What Should I Search?",
+            attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
     }
 
     override func didReceiveMemoryWarning() {
