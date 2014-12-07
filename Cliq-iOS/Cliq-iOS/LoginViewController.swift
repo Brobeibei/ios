@@ -11,6 +11,9 @@ import UIKit
 class LoginViewController: UIViewController, FBLoginViewDelegate {
     
    // @IBOutlet var fbLoginView : FBLoginView!
+   
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +21,17 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         var currentUser : User = User(name: ["first", "last"], location: [0.0, 0.0])
         userMgr.currentUser = currentUser
         
+        emailField.attributedPlaceholder = NSAttributedString(string:"E-mail Address",
+            attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
+        passwordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName:UIColor.grayColor()])
+        
         
         //self.fbLoginView.delegate = self
         //self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
         
     }
+    
+   
     
     // Facebook delegate methods
     
