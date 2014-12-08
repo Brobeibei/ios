@@ -606,11 +606,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="326" height="571"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MWh-D5-1Cj">
-                                <rect key="frame" x="38" y="380" width="250" height="40"/>
+                                <rect key="frame" x="38" y="379" width="250" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58999999999999997" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPW-bD-dwK">
                                 <rect key="frame" x="38" y="451" width="250" height="49"/>
@@ -621,16 +621,16 @@
                                     <segue destination="49e-Tb-3d3" kind="show" id="VAH-gA-uLu"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Lock" translatesAutoresizingMaskIntoConstraints="NO" id="f4l-Rx-bng">
-                                <rect key="frame" x="50" y="383" width="27" height="32"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  E-mail Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pcJ-nJ-4y4">
                                 <rect key="frame" x="38" y="325" width="250" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58999999999999997" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Lock" translatesAutoresizingMaskIntoConstraints="NO" id="f4l-Rx-bng">
+                                <rect key="frame" x="50" y="383" width="27" height="32"/>
+                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Mail" translatesAutoresizingMaskIntoConstraints="NO" id="Fyq-lx-Lza">
                                 <rect key="frame" x="47" y="332" width="32" height="25"/>
                             </imageView>
