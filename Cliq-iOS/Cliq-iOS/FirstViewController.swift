@@ -28,6 +28,29 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         var cell: EventCardCell = tableView.dequeueReusableCellWithIdentifier("mainEventCell") as EventCardCell
         
+        var index = indexPath.row
+        
+        var desc = eventData[index]["description"]
+        cell.eventCardDesc.text = "\(desc)"
+        
+        var tags = eventData[index]["tags"]
+//        var tagJoiner = ", "
+//        var tags = tagJoiner.join(eventData[index]["tags"])
+        cell.eventCardTags.text = "\(tags)"
+        
+        var time = eventData[index]["date"]
+        cell.eventCardTime.text = "\(time)"
+        
+        var lat = eventData[index]["location"]
+        var lng = eventData[index]["location"]
+        var loc = "\(lat), \(lng)"
+        cell.eventCardDist.text = "\(loc)"
+
+        var groupSize = eventData[index]["maxSize"]
+        cell.eventCardGroupSize.text = "0/\(groupSize)"
+        
+        
+        cell.eventCardName.text = "Bill"
         
         
         return cell
@@ -60,17 +83,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             var err : NSError?
             var eventJSON = NSJSONSerialization.JSONObjectWithData(data, options: nil, error : &err) as NSArray
             
+            for index in 0...eventJSON.count-1 {
+                println("EVENT \(index + 1): \(eventJSON[index])")
+                println("========================================")
+            }
+            
             dispatch_async(dispatch_get_main_queue(), {
                 self.eventData = eventJSON
                 self.tblEvents!.reloadData()
             })
             
-            
-            
-//            for index in 0...eventJSON.count-1 {
-//                println("EVENT \(index + 1): \(eventJSON[index])")
-//                println("========================================")
-//            }
             
         })
         
