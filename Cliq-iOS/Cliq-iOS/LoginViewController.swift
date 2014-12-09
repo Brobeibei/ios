@@ -10,26 +10,48 @@ import UIKit
 
 class LoginViewController: UIViewController, FBLoginViewDelegate {
     
-    @IBOutlet var fbLoginView : FBLoginView!
+   // @IBOutlet var fbLoginView : FBLoginView!
+   
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.fbLoginView.delegate = self
-        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+        var currentUser : User = User(name: ["first", "last"], location: [0.0, 0.0])
+        userMgr.currentUser = currentUser
+        
+        emailField.attributedPlaceholder = NSAttributedString(string:"E-mail Address",
+            attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
+        passwordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName:UIColor.grayColor()])
+        
+        
+        //self.fbLoginView.delegate = self
+        //self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+        
     }
+    
+   
     
     // Facebook delegate methods
     
-    func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
-        println("User Logged In")
-       self .performSegueWithIdentifier("loggedIn", sender: self)
+    //func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
+      //  println("User Logged In")
+       //self .performSegueWithIdentifier("loggedIn", sender: self)
         // show the next view
-        println("This is where you perform a segue.")
+        //println("This is where you perform a segue.")
     }
     
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser){
         println("User Name: \(user.name)")
+        println(user)
+    
+        // TODO
+        // send a request with the current user's Facebook ID
+        // if the id is registered in our database of users, initalize a currentUser object with the logged in user's information
+        // if the id is not registered, add the user and their info to the database and then initalize a currentUser object with that info
+        
+        
     }
     
     func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
@@ -40,10 +62,10 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         println("Error: \(handleError.localizedDescription)")
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    //override func didReceiveMemoryWarning() {
+      //  super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    //}
     
     
-}
+//}
