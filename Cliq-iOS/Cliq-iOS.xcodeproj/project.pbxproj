@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0E0559681A0741FD00E5C7DD /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0559671A0741FD00E5C7DD /* UserManager.swift */; };
 		0E313A7A1A09971E0052DF54 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E313A791A09971E0052DF54 /* FacebookSDK.framework */; };
+		0E3B06271A37083A00E9883C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B06261A37083A00E9883C /* SwiftyJSON.swift */; };
+		0E3B06281A37084800E9883C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3B06231A37082900E9883C /* Alamofire.framework */; };
+		0E3B06291A37084800E9883C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3B06231A37082900E9883C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E44BBBE19FF65F4001312DF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E44BBBD19FF65F4001312DF /* Event.swift */; };
 		0E44BBC019FF6D56001312DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E44BBBF19FF6D56001312DF /* User.swift */; };
 		0EA80D2719EFA8E500D22EEF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA80D2619EFA8E500D22EEF /* CoreLocation.framework */; };
@@ -29,6 +32,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0E3B06221A37082900E9883C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E3B061D1A37082900E9883C /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		0E3B06241A37082900E9883C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E3B061D1A37082900E9883C /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		0E3B062A1A37084800E9883C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E3B061D1A37082900E9883C /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 		0EFD3BC719E9C16600F1015F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0EFD3BAA19E9C16600F1015F /* Project object */;
@@ -38,9 +62,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0E3B062C1A37084800E9883C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E3B06291A37084800E9883C /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0E0559671A0741FD00E5C7DD /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		0E313A791A09971E0052DF54 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		0E3B061D1A37082900E9883C /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../../CODE/RESOURCES/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		0E3B06261A37083A00E9883C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		0E44BBBD19FF65F4001312DF /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0E44BBBF19FF6D56001312DF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0EA80D2619EFA8E500D22EEF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -71,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9ADD721A0CB66A00D1818E /* MapKit.framework in Frameworks */,
+				0E3B06281A37084800E9883C /* Alamofire.framework in Frameworks */,
 				2A9ADD701A0CB65E00D1818E /* Foundation.framework in Frameworks */,
 				0EA80D2719EFA8E500D22EEF /* CoreLocation.framework in Frameworks */,
 				0ED99FCA19EBBA4600CCEB79 /* GoogleMaps.framework in Frameworks */,
@@ -88,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3B061E1A37082900E9883C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E3B06231A37082900E9883C /* Alamofire.framework */,
+				0E3B06251A37082900E9883C /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0EFD3BA919E9C16600F1015F = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +145,7 @@
 				0EFD3BB419E9C16600F1015F /* Cliq-iOS */,
 				0EFD3BC919E9C16600F1015F /* Cliq-iOSTests */,
 				0EFD3BB319E9C16600F1015F /* Products */,
+				0E3B061D1A37082900E9883C /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +182,7 @@
 		0EFD3BB519E9C16600F1015F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E3B06261A37083A00E9883C /* SwiftyJSON.swift */,
 				0EFD3BB619E9C16600F1015F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -176,10 +228,12 @@
 				0EFD3BAE19E9C16600F1015F /* Sources */,
 				0EFD3BAF19E9C16600F1015F /* Frameworks */,
 				0EFD3BB019E9C16600F1015F /* Resources */,
+				0E3B062C1A37084800E9883C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0E3B062B1A37084800E9883C /* PBXTargetDependency */,
 			);
 			name = "Cliq-iOS";
 			productName = "Cliq-iOS";
@@ -235,6 +289,12 @@
 			mainGroup = 0EFD3BA919E9C16600F1015F;
 			productRefGroup = 0EFD3BB319E9C16600F1015F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0E3B061E1A37082900E9883C /* Products */;
+					ProjectRef = 0E3B061D1A37082900E9883C /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0EFD3BB119E9C16600F1015F /* Cliq-iOS */,
@@ -242,6 +302,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0E3B06231A37082900E9883C /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 0E3B06221A37082900E9883C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0E3B06251A37082900E9883C /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 0E3B06241A37082900E9883C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0EFD3BB019E9C16600F1015F /* Resources */ = {
@@ -271,6 +348,7 @@
 				0E0559681A0741FD00E5C7DD /* UserManager.swift in Sources */,
 				0ED99FD019EC6E0500CCEB79 /* EventCardCell.swift in Sources */,
 				0ED99FC819EB258C00CCEB79 /* EventManager.swift in Sources */,
+				0E3B06271A37083A00E9883C /* SwiftyJSON.swift in Sources */,
 				2A9ADD6E1A0CB64500D1818E /* MapViewController.swift in Sources */,
 				0EFD3BE019E9CE8500F1015F /* LoginViewController.swift in Sources */,
 				0EFD3BBC19E9C16600F1015F /* SecondViewController.swift in Sources */,
@@ -292,6 +370,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0E3B062B1A37084800E9883C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 0E3B062A1A37084800E9883C /* PBXContainerItemProxy */;
+		};
 		0EFD3BC819E9C16600F1015F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0EFD3BB119E9C16600F1015F /* Cliq-iOS */;
@@ -393,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/arjunsarode/Documents/FacebookSDK,
@@ -410,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/arjunsarode/Documents/FacebookSDK,

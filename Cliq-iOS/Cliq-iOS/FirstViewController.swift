@@ -8,33 +8,27 @@
 
 import UIKit
 import CoreLocation
+import AlamoFire
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
+    
+    var eventData = []
+    
     @IBOutlet var tblEvents : UITableView!
     
-    func findMyTime(){
-        let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
-        let hour = components.hour
-        let minutes = components.minute
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Counts how many events there are to set the number of rows in the table
-//        return eventMgr.events.count
-        return eventMgr.eventStream.count
+
+        return eventData.count
+        
     }
 
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        // TODO
-        // Add values to each of the fields in the custom cell based on the info in the event struct
         var cell: EventCardCell = tableView.dequeueReusableCellWithIdentifier("mainEventCell") as EventCardCell
         
-//        cell.eventCardDesc.text = eventMgr.eventStream[Int(indexPath)].desc
+        
         
         return cell
         
@@ -48,10 +42,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var newEvent = Event(desc: "test", tags: ["1","2"], timePosted: 99999, groupSize: 1, location: [0.0,0.0], currentUser: userMgr.currentUser!)
         
-        eventMgr.addEventToMainStream(newEvent)
-        println(newEvent)
+        getEventData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,7 +51,32 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Dispose of any resources that can be recreated.
     }
     
-
-
+    
+    func getEventData() {
+        let mySession = NSURLSession.sharedSession()
+        let url : NSURL = NSURL(string: "https://cs196-cliq.herokuapp.com/api/events")!
+        let networkTask = mySession.dataTaskWithURL(url, completionHandler : {data, response, error -> Void in
+            
+            var err : NSError?
+            var eventJSON = NSJSONSerialization.JSONObjectWithData(data, options: nil, error : &err) as NSArray
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.eventData = eventJSON
+                self.tblEvents!.reloadData()
+            })
+            
+            
+            
+//            for index in 0...eventJSON.count-1 {
+//                println("EVENT \(index + 1): \(eventJSON[index])")
+//                println("========================================")
+//            }
+            
+        })
+        
+        networkTask.resume()
+    }
+    
+    
 }
 
