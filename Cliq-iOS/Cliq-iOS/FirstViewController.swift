@@ -30,13 +30,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         var index = indexPath.row
         
-        var desc = eventData[index]["description"]
-        cell.eventCardDesc.text = "\(desc)"
+        var name = eventData[index]["name"] as String
+        cell.eventCardName.text = "\(name)"
         
-        var tags = eventData[index]["tags"]
-//        var tagJoiner = ", "
-//        var tags = tagJoiner.join(eventData[index]["tags"])
-        cell.eventCardTags.text = "\(tags)"
+        var desc = eventData[index]["description"]
+        
+        cell.eventCardDesc.text = "hey"
+        
+//        var tags = eventData[index]["tags"] as NSArray
+        
+//        cell.eventCardTags.text = "\(tags)"
         
         var time = eventData[index]["date"]
         cell.eventCardTime.text = "\(time)"
@@ -46,11 +49,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var loc = "\(lat), \(lng)"
         cell.eventCardDist.text = "\(loc)"
 
-        var groupSize = eventData[index]["maxSize"]
+        var groupSize = eventData[index]["maxSize"] as Int
         cell.eventCardGroupSize.text = "0/\(groupSize)"
         
         
-        cell.eventCardName.text = "Bill"
+        
         
         
         return cell
@@ -92,7 +95,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.eventData = eventJSON
                 self.tblEvents!.reloadData()
             })
-            
             
         })
         
