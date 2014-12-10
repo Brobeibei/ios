@@ -12,8 +12,11 @@ import AlamoFire
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
+    let locationManager = CLLocationManager()
+    
     
     var eventData = []
+    var currentLocation : CLLocation?
     
     @IBOutlet var tblEvents : UITableView!
     
@@ -48,7 +51,24 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let loc = eventData[index]["location"] as? NSDictionary {
             let lat = loc["lat"] as Double
             let lng = loc["lng"] as Double
-            cell.eventCardDist.text = "\(lat), \(lng)"
+            
+            let eventLocation : CLLocation = CLLocation(latitude: lat, longitude: lng)
+            
+            
+            
+            let distMeters = self.currentLocation!.distanceFromLocation(eventLocation)
+            
+            let distMiles = distMeters / 1609.34
+            let distFeet = distMeters * 3.28084
+            
+            if distMiles < 0.1 {
+                let feetFormatted = Int(round(distFeet / 10) * 10)
+                cell.eventCardDist.text = "\(feetFormatted)ft"
+            } else {
+                let milesFormatted = Int(round(distMiles))
+                cell.eventCardDist.text = "\(milesFormatted)mi"
+            }
+        
         }
         
         if let groupSize = eventData[index]["maxSize"] as? Int {
@@ -69,12 +89,41 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getEventData()
+        
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        self.currentLocation = manager.location
+        
+        println("updated current location")
+        
+        
+        locationManager.stopUpdatingLocation()
+        getEventData()
+
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        println("Error while updating location " + error.localizedDescription)
     }
     
     
