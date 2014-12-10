@@ -33,27 +33,27 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var name = eventData[index]["name"] as String
         cell.eventCardName.text = "\(name)"
         
-        var desc = eventData[index]["description"] as String
+        if let desc = eventData[index]["description"] as? String {
+            cell.eventCardDesc.text = "\(desc)"
+        }
         
-        cell.eventCardDesc.text = "\(desc)"
+        if let tags = eventData[index]["tags"] as? NSArray {
+            cell.eventCardTags.text = "\(tags)"
+        }
+    
+        if let time = eventData[index]["date"] as? NSDate {
+            cell.eventCardTime.text = "\(time)"
+        }
         
-//        var tags = eventData[index]["tags"] as NSArray
+        if let loc = eventData[index]["location"] as? NSDictionary {
+            let lat = loc["lat"] as Double
+            let lng = loc["lng"] as Double
+            cell.eventCardDist.text = "\(lat), \(lng)"
+        }
         
-//        cell.eventCardTags.text = "\(tags)"
-        
-        var time = eventData[index]["date"]
-        cell.eventCardTime.text = "\(time)"
-        
-        var lat = eventData[index]["location"]
-        var lng = eventData[index]["location"]
-        var loc = "\(lat), \(lng)"
-        cell.eventCardDist.text = "\(loc)"
-
-        var groupSize = eventData[index]["maxSize"] as Int
-        cell.eventCardGroupSize.text = "0/\(groupSize)"
-        
-        
-        
+        if let groupSize = eventData[index]["maxSize"] as? Int {
+            cell.eventCardGroupSize.text = "0/\(groupSize)"
+        }
         
         
         return cell
@@ -84,17 +84,25 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let networkTask = mySession.dataTaskWithURL(url, completionHandler : {data, response, error -> Void in
             
             var err : NSError?
-            var eventJSON = NSJSONSerialization.JSONObjectWithData(data, options: nil, error : &err) as NSArray
             
-            for index in 0...eventJSON.count-1 {
-                println("EVENT \(index + 1): \(eventJSON[index])")
-                println("========================================")
+            if err != nil {
+                println(err)
+            } else {
+            
+                var eventJSON = NSJSONSerialization.JSONObjectWithData(data, options: nil, error : &err) as NSArray
+                
+                for index in 0...eventJSON.count-1 {
+                    println("EVENT \(index + 1): \(eventJSON[index])")
+                    println("========================================")
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.eventData = eventJSON
+                    self.tblEvents!.reloadData()
+                })
+
             }
             
-            dispatch_async(dispatch_get_main_queue(), {
-                self.eventData = eventJSON
-                self.tblEvents!.reloadData()
-            })
             
         })
         
