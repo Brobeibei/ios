@@ -39,7 +39,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
 //        var tags = eventData[index]["tags"] as NSArray
         
-        cell.eventCardTags.text = "tags"
+//        cell.eventCardTags.text = "\(tags)"
         
         var time = eventData[index]["date"]
         cell.eventCardTime.text = "\(time)"
