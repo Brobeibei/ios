@@ -33,9 +33,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var name = eventData[index]["name"] as String
         cell.eventCardName.text = "\(name)"
         
-        var desc = eventData[index]["description"]
+        var desc = eventData[index]["description"] as String
         
-        cell.eventCardDesc.text = "hey"
+        cell.eventCardDesc.text = "\(desc)"
         
 //        var tags = eventData[index]["tags"] as NSArray
         

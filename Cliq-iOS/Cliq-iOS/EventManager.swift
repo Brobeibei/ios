@@ -39,7 +39,7 @@ class EventManager: NSObject {
         eventStream.append(event);
     }
     
-    func requestToJoinEvent(user, User, event : Event) {
+    func requestToJoinEvent(user: User, event : Event) {
         
     }
     
