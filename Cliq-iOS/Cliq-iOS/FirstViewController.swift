@@ -52,7 +52,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let lat = loc["lat"] as Double
             let lng = loc["lng"] as Double
             
-            let eventLocation : CLLocation = CLLocation(latitude: lat, longitude: lng)
+            // SWITCH LAT AND LNG BACK ONCE BACKEND IS FIXED
+            let eventLocation : CLLocation = CLLocation(latitude: lng, longitude: lat)
             
             
             
@@ -61,12 +62,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let distMiles = distMeters / 1609.34
             let distFeet = distMeters * 3.28084
             
-            if distMiles < 0.1 {
+            if distMiles < 0.2 {
                 let feetFormatted = Int(round(distFeet / 10) * 10)
                 cell.eventCardDist.text = "\(feetFormatted)ft"
+            } else if distMiles < 2 {
+                let milesTenths = (round(distMiles * 10) / 10)
+                cell.eventCardDist.text = "\(milesTenths)mi"
             } else {
-                let milesFormatted = Int(round(distMiles))
-                cell.eventCardDist.text = "\(milesFormatted)mi"
+                let milesOnes = Int(round(distMiles))
+                cell.eventCardDist.text = "\(milesOnes)mi"
             }
         
         }
