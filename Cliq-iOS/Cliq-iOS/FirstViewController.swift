@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import AlamoFire
+import Foundation
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
@@ -39,13 +40,43 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let desc = eventData[index]["description"] as? String {
             cell.eventCardDesc.text = "\(desc)"
         }
-        
-        if let tags = eventData[index]["tags"] as? NSArray {
-            cell.eventCardTags.text = "\(tags)"
-        }
     
-        if let time = eventData[index]["date"] as? NSDate {
-            cell.eventCardTime.text = "\(time)"
+        if let eventSeconds = eventData[index]["dateTime"] as? Double {
+            let eventDate = NSDate(timeIntervalSince1970:eventSeconds)
+            var dateString:String
+            var currentDate: NSDate = NSDate()
+            
+            let calendar = NSCalendar.currentCalendar()
+            let currentComponents = calendar.components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitMonth | .CalendarUnitYear | .CalendarUnitDay, fromDate: currentDate)
+            let currentHour = currentComponents.hour
+            let currentMinutes = currentComponents.minute
+            let currentMonth = currentComponents.month
+            let currentYear = currentComponents.year
+            let currentDay = currentComponents.day
+            
+            let eventComponents = calendar.components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitMonth | .CalendarUnitYear | .CalendarUnitDay, fromDate: eventDate)
+            let eventtHour = eventComponents.hour
+            let eventMinutes = eventComponents.minute
+            let eventMonth = eventComponents.month
+            let eventYear = eventComponents.year
+            let eventDay = eventComponents.day
+            
+            var dateFormatter:NSDateFormatter = NSDateFormatter()
+            var formattedDate:String
+            if (eventYear == currentYear && eventMonth == currentMonth && eventDay == currentDay) {
+                
+                dateFormatter.dateFormat = "HH:mm"
+                formattedDate = dateFormatter.stringFromDate(eventDate)
+            } else if (eventYear == currentYear && eventMonth == currentMonth && eventDay == currentDay + 1) {
+                dateFormatter.dateFormat = "Tomorrow"
+                formattedDate = dateFormatter.stringFromDate(eventDate)
+            } else {
+                dateFormatter.dateFormat = "MM/dd"
+                formattedDate = dateFormatter.stringFromDate(eventDate)
+            }
+            
+            println(formattedDate)
+            cell.eventCardTime.text = "\(formattedDate)"
         }
         
         if let loc = eventData[index]["location"] as? NSDictionary {
@@ -54,8 +85,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             // SWITCH LAT AND LNG BACK ONCE BACKEND IS FIXED
             let eventLocation : CLLocation = CLLocation(latitude: lng, longitude: lat)
-            
-            
             
             let distMeters = self.currentLocation!.distanceFromLocation(eventLocation)
             
